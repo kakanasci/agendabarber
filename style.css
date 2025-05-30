@@ -551,12 +551,12 @@ footer {
   .hero-content h2 {
     font-size: 2.2rem;
   }
+  
 }
 
 .btn-back {
-  margin: 10px 20px;
-  padding: 8px 15px;
-  font-size: 16px;
+ 
+  font-size: 12px;
   background-color: #444;
   color: white;
   border: none;
@@ -792,6 +792,16 @@ header h1 {
   
   .contact-info {
     grid-template-columns: 1fr;
+      h1, h2, h3 {
+  text-shadow: 
+    2px 2px 0px #ff1f0f,  /* Sombra principal vermelha */
+    4px 4px 0px rgba(0, 0, 0, 0.2);  /* Sombra secundária para profundidade */
+  
+  display: inline-block;  /* Para a sombra não vazar em elementos pai */
+  position: relative;
+  letter-spacing: 1px;  /* Melhora a legibilidade com sombra */
+}
+
   }
 }
 
@@ -814,4 +824,26 @@ header h1 {
 .whatsapp-btn i {
   margin-right: 8px;
 }
+h1, h2, h3 {
+  text-shadow: 
+    2px 2px 0px #ff1f0f,  /* Sombra principal vermelha */
+    4px 4px 0px rgba(0, 0, 0, 0.2);  /* Sombra secundária para profundidade */
   
+  display: inline-block;  /* Para a sombra não vazar em elementos pai */
+  position: relative;
+  letter-spacing: 1px;  /* Melhora a legibilidade com sombra */
+  
+  /* Novas propriedades para garantir visibilidade em mobile */
+  color:#ffc107;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    text-shadow: 
+      1.5px 1.5px 0px #ff1f0f,
+      3px 3px 0px rgba(0, 0, 0, 0.2);
+      color:#ffc107;
+
+  }
+}
